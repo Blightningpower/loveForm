@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" xmlns="http://www.w3.org/1999/html">
 <head>
 
     <meta charset="UTF-8">
@@ -12,25 +12,16 @@
             font-family: sans-serif;
         }
 
-        html {
-            width: 100%;
-            height: 100%;
-        }
-
-        body {
+        html, body {
             width: 100%;
             height: 100%;
             background-color: pink;
+            margin: 0;
+            text-align: center;
         }
 
-        button > input {
-            border: none;
-            width: 0;
-        }
-
-         button:hover {
-            background-color: pink;
-             border-radius: 2px;
+        h1 {
+            font-size: larger;
         }
 
         .flexContainer {
@@ -39,29 +30,92 @@
             justify-content: center;
             width: 100%;
             height: 100%;
-            padding-inline: 2%;
+            flex-wrap: wrap;
         }
 
         .container {
             background-color: white;
             text-align: center;
-            padding: 4%;
+            padding: 2%;
             border-radius: 2px;
+            width: 60%;
+            height: 90%;
+            margin: 0 auto;
         }
 
         #eMail {
             width: 25rem;
         }
 
+        .submitButton > input {
+            border: none;
+            width: 0;
+        }
+
         .submitButton {
-            padding: 1%;
+            position: relative;
+            width: 3rem;
+            height: 4rem;
+            margin-top: 10px; /* leave some space above */
+            background-color: pink;
+            z-index: 0;
+            transform: rotate(-45deg);
+            border: 2px solid black;
+        }
+
+        .submitButton:before {
+            position: absolute;
+            content: "";
+            right: -45%;
+            bottom: 0;
+            background-color: pink;
+            border-radius: 50px 50px 0 0;
+            width: 5vw;
+            height: 16vh;
+            border: 2px solid black;
+            border-bottom: none;
+            border-right: none;
+            z-index: 1;
+        }
+
+        .submitButton:after {
+            position: absolute;
+            content: "";
+            left: 40%;
+            top: -36%;
+            background-color: pink;
+            border-radius: 50px 50px 0 0;
+            width: 5vw;
+            height: 16vh;
+            border: 2px solid black;
+            border-bottom: none;
+            border-left: none;
+            z-index: 2;
+            transform: rotate(90deg);
+        }
+
+        .submitButton > span {
+            color: white;
+            z-index: 3;
+            position: absolute;
+            transform: rotate(45deg)translate(-39%, -20%);
+            font-weight: 900;
+        }
+
+        .submitButton:hover, .submitButton:hover::before, .submitButton:hover::after, .submitButton > span:hover {
+            background-color: red;
+            border-radius: 2px;
+            color: blue;
+        }
+
+        .submitButton:hover::before, .submitButton:hover::after {
+            border-radius: 50px 50px 0 0;
         }
 
     </style>
 </head>
 
 <body>
-<div id="size"></div>
 <div class="flexContainer">
     <div class="container">
         <h1><span>Vul de namen van je nummer 3 crushes in en krijg op je mail te zien wie je MeantToBe is</span></h1>
@@ -70,9 +124,9 @@
         <br>
         <div class="col-75">
             <select id="country" name="country">
-                <option value="Nederland">Nederland</option>
-                <option value="Deutchland">Duitsland</option>
-                <option value="USA">USA</option>
+                <option value="Nederland">Nederlands</option>
+                <option value="Deutchland">Deutch</option>
+                <option value="USA">English</option>
             </select>
         </div>
         <br>
@@ -119,8 +173,7 @@
             <br>
 
             <button onclick="error()" class="submitButton">
-                Bereken Resultaat
-                <input type="submit">
+                <span>Bereken Resultaat</span><input type="submit">
             </button>
 
         </form>
