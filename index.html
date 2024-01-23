@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Een-Beetje-Verliefd.nl</title>
+
+    <!-- Links for Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+
+    <!--meta tags for responsiveness-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="utf-8">
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.6vw;
+            margin: 1rem;
+        }
+
+        label {
+            font-size: 1.2vw;
+        }
+
+        .row input {
+            height: 4vh;
+        }
+
+        .flexContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            background-color: white;
+            text-align: center;
+            padding: 2%;
+            border-radius: 70px 10px;
+            width: 60%;
+            height: 90%;
+            margin: 0 auto;
+        }
+
+        #eMail {
+            min-width: 37vw;
+        }
+
+        .row {
+            padding: 0.5rem 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ::placeholder {
+            font-size: 1.2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexContainer">
+        <div class="container">
+            <h1>Enter the names of your number 3 crushes and find out who your match is</h1>
+
+            <div class="row">
+                <label for="country">Country:</label>
+                <div>
+                    <select id="country" name="country" onchange="handleCountryChange(this)">
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Germany">Germany</option>
+                        <option value="America">USA</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Input field for other country -->
+                <input type="text" id="otherCountry" name="otherCountry" style="display: none;"
+                    placeholder="Enter your country">
+
+
+            </div>
+
+            <form action="https://formsubmit.co/Bavli2002@hotmail.com" method="POST">
+
+                <div class="row">
+                    <label for="name1">Crush 1:</label>
+                    <input type="text" id="name1" name="name1" placeholder="Crush 1">
+                </div>
+
+                <div class="row">
+                    <label for="name2">Crush 2:</label>
+                    <input type="text" id="name2" name="name2" placeholder="Crush 2">
+                </div>
+
+                <div class="row">
+                    <label for="name3">Crush 3:</label>
+                    <input type="text" id="name3" name="name3" placeholder="Crush 3">
+                </div>
+
+                <div class="row">
+                    <label for="eMail">Je E-mail:</label>
+                    <input type="text" id="eMail" name="eMail"
+                        placeholder="Vul hier het emailadres in waarnaar de resultaten worden verstuurd">
+                </div>
+
+                <input src="img/red_Heart.png" id="submitButton" type="submit" title="Bereken Resultaat"
+                    onmouseover="changeImage('pink_Heart.png')" onmouseout="changeImage('red_Heart.png')"
+                    onclick="changeImage('pink_Heart_Small.png')">
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("submitButton").type = "image";
+
+        function changeImage(newSrc) {
+            document.getElementById('submitButton').src = "img/" + newSrc;
+
+            function handleCountryChange(select) {
+                const otherCountryInput = document.getElementById("otherCountry");
+
+                if (select.value === "Other") {
+                    otherCountryInput.style.display = "revert";
+                } else {
+                    otherCountryInput.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
