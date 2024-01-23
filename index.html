@@ -58,14 +58,15 @@
             background-color: white;
             text-align: center;
             padding: 2%;
-            border-radius: 70px 10px;
-            width: 60%;
+            border-radius: 70px;
             height: 90%;
             margin: 0 auto;
+            min-height: 33.5625rem; 
         }
 
         #eMail {
-            min-width: 37vw;
+            width: 37vw;
+            min-width: 31rem;
         }
 
         .row {
@@ -75,8 +76,31 @@
             align-items: center;
         }
 
+        select,
         ::placeholder {
             font-size: 1.2vw;
+        }
+
+        #submitButton {
+            cursor: pointer;
+            width: 9vw;
+            height: auto;
+        }
+
+        @media screen and (max-width: 640px) {
+
+            h1,
+            label,
+            select,
+            ::placeholder {
+                font-size: 1rem;
+                padding-top: inherit;
+            }
+
+            #submitButton {
+                width: auto;
+            }
+
         }
     </style>
 </head>
@@ -86,51 +110,50 @@
         <div class="container">
             <h1>Enter the names of your number 3 crushes and find out who your match is</h1>
 
-            <div class="row">
-                <label for="country">Country:</label>
-                <div>
-                    <select id="country" name="country" onchange="handleCountryChange(this)">
-                        <option value="Netherlands">Netherlands</option>
-                        <option value="Belgium">Belgium</option>
-                        <option value="Germany">Germany</option>
-                        <option value="America">USA</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
 
-                <!-- Input field for other country -->
-                <input type="text" id="otherCountry" name="otherCountry" style="display: none;"
-                    placeholder="Enter your country">
-
-
-            </div>
 
             <form action="https://formsubmit.co/Bavli2002@hotmail.com" method="POST">
 
                 <div class="row">
-                    <label for="name1">Crush 1:</label>
-                    <input type="text" id="name1" name="name1" placeholder="Crush 1">
-                </div>
+                    <label for="country">Country:</label>
+                    <div>
+                        <select id="country" name="country" onchange="handleCountryChange(this)">
+                            <option value="Netherlands">Netherlands</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Germany">Germany</option>
+                            <option value="America">USA</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
 
-                <div class="row">
-                    <label for="name2">Crush 2:</label>
-                    <input type="text" id="name2" name="name2" placeholder="Crush 2">
-                </div>
+                    <!-- Input field for other country -->
+                    <input type="text" id="otherCountry" name="otherCountry" style="display: none;"
+                        placeholder="Enter your country">
 
-                <div class="row">
-                    <label for="name3">Crush 3:</label>
-                    <input type="text" id="name3" name="name3" placeholder="Crush 3">
-                </div>
+                    <div class="row">
+                        <label for="name1">Crush 1:</label>
+                        <input type="text" id="name1" name="name1" placeholder="Crush 1">
+                    </div>
 
-                <div class="row">
-                    <label for="eMail">Je E-mail:</label>
-                    <input type="text" id="eMail" name="eMail"
-                        placeholder="Vul hier het emailadres in waarnaar de resultaten worden verstuurd">
-                </div>
+                    <div class="row">
+                        <label for="name2">Crush 2:</label>
+                        <input type="text" id="name2" name="name2" placeholder="Crush 2">
+                    </div>
 
-                <input src="img/red_Heart.png" id="submitButton" type="submit" title="Bereken Resultaat"
-                    onmouseover="changeImage('pink_Heart.png')" onmouseout="changeImage('red_Heart.png')"
-                    onclick="changeImage('pink_Heart_Small.png')">
+                    <div class="row">
+                        <label for="name3">Crush 3:</label>
+                        <input type="text" id="name3" name="name3" placeholder="Crush 3">
+                    </div>
+
+                    <div class="row">
+                        <label for="eMail">Je E-mail:</label>
+                        <input type="text" id="eMail" name="eMail"
+                            placeholder="Vul hier het emailadres in waarnaar de resultaten worden verstuurd">
+                    </div>
+
+                    <input src="img/red_Heart.png" id="submitButton" type="submit" title="Bereken Resultaat"
+                        onmouseover="changeImage('pink_Heart.png')" onmouseout="changeImage('red_Heart.png')"
+                        onclick="changeImage('pink_Heart_Small.png')">
             </form>
         </div>
     </div>
