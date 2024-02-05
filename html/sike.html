@@ -7,9 +7,9 @@
     <title>Een-Beetje-Verliefd.nl</title>
 
     <!-- Links for Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
 
     <!--meta tags for responsiveness-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -22,6 +22,7 @@
 </head>
 
 <body onload="alert('Sike!! You have been pranked!')">
+    
     <div class="flexContainer">
         <div class="container">
             <h1>You really thought there's a way to calculate who your best match is by writing 3 names?</h1>
@@ -30,24 +31,6 @@
         </div>
     </div>
 
-    <script>
-
-        document.getElementById("submitButton").type = "image";
-
-        function changeImage(newSrc) {
-            document.getElementById('submitButton').src = "img/" + newSrc;
-
-            function handleCountryChange(select) {
-                const otherCountryInput = document.getElementById("otherCountry");
-
-                if (select.value === "Other") {
-                    otherCountryInput.style.display = "revert";
-                } else {
-                    otherCountryInput.style.display = "none";
-                }
-            }
-        }
-    </script>
 </body>
 
 </html>
