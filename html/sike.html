@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Een-Beetje-Verliefd.nl</title>
+
+    <!-- Links for Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+
+    <!--meta tags for responsiveness-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="utf-8">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body onload="alert('Sike!! You have been pranked!')">
+    <div class="flexContainer">
+        <div class="container">
+            <h1>You really thought there's a way to calculate who your best match is by writing 3 names?</h1>
+            <h2>Never try to make logic of love! Also never write down who your crushes is though &#x1F440;</h2>
+            <img src="https://gifdb.com/images/high/head-slap-jim-carrey-dumb-and-dumber-movie-do0zdbliio42u0et.webp" alt="head-slap-jim-carrey-dumb-and-dumber-movie-do0zdbliio42u0et.webp">
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("submitButton").type = "image";
+
+        function changeImage(newSrc) {
+            document.getElementById('submitButton').src = "img/" + newSrc;
+
+            function handleCountryChange(select) {
+                const otherCountryInput = document.getElementById("otherCountry");
+
+                if (select.value === "Other") {
+                    otherCountryInput.style.display = "revert";
+                } else {
+                    otherCountryInput.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

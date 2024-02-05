@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6vw;
+    margin: 1rem;
+}
+
+label {
+    font-size: 1.2vw;
+}
+
+img {
+    margin: auto;
+    padding: inherit;
+    max-width: 30vw;
+}
+
+.row input {
+    height: 4vh;
+}
+
+.flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.container {
+    background-color: white;
+    text-align: center;
+    padding: 2%;
+    border-radius: 70px;
+    height: 90%;
+    margin: 0 auto;
+    min-height: 33.5625rem; 
+}
+
+#eMail {
+    width: 37vw;
+    min-width: 31rem;
+}
+
+.row {
+    padding: 0.5rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select,
+::placeholder {
+    font-size: 1.2vw;
+}
+
+#submitButton {
+    cursor: pointer;
+    width: 6vw;
+    height: auto;
+}
+
+@media screen and (max-width: 640px) {
+
+    h1,
+    label,
+    select,
+    ::placeholder {
+        font-size: 1rem;
+        padding-top: inherit;
+    }
+
+    #submitButton {
+        width: auto;
+    }
+
+}
+
+[alt="head-slap-jim-carrey-dumb-and-dumber-movie-do0zdbliio42u0et.webp"] {
+    margin-top: 3rem;
+}
