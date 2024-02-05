@@ -24,8 +24,6 @@ label {
 
 img {
     margin: auto;
-    padding: inherit;
-    max-width: 30vw;
 }
 
 .row input {
@@ -36,9 +34,14 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    max-width: 65vw;
     flex-wrap: wrap;
+    background-color: white;
+    text-align: center;
+    padding: 2%;
+    border-radius: 70px;
+    margin: auto;
+    min-height: 33.5625rem;
 }
 
 .container {
@@ -47,13 +50,14 @@ img {
     padding: 2%;
     border-radius: 70px;
     height: 90%;
-    margin: 0 auto;
-    min-height: 33.5625rem; 
+    margin: 0 1rem;
+    min-height: 33.5625rem;
+    max-width: -webkit-fill-available;
 }
 
 #eMail {
-    width: 37vw;
-    min-width: 31rem;
+    width: 15rem;
+    max-width: 36vw;
 }
 
 .row {
@@ -82,14 +86,17 @@ select,
     ::placeholder {
         font-size: 1rem;
         padding-top: inherit;
+        padding-bottom: inherit;
     }
 
     #submitButton {
-        width: auto;
+        width: 25vw;
     }
 
 }
 
 [alt="head-slap-jim-carrey-dumb-and-dumber-movie-do0zdbliio42u0et.webp"] {
     margin-top: 3rem;
+    padding: inherit;
+    max-width: 30vw;
 }
