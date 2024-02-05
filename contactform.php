@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['form_submitted'] = true;
 
     // Redirect to another page
-    header("Location: ../html/sike.html");
+    header("Location: html/sike.html");
     exit();
 }
 ?>
